@@ -1,0 +1,12 @@
+services:
+  postgresql:
+    image: postgres:13-alpine
+    container_name: postgresql
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=name
+      - POSTGRES_PASSWORD=tan1234
